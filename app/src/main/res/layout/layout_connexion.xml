@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="257dp"
         android:layout_height="504dp"
+        android:layout_marginTop="180dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,19 +24,31 @@
             android:textAlignment="center"
             android:textSize="24sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
+
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="66dp"
             android:ems="10"
             android:inputType="textPassword" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
 
         <Button
             android:id="@+id/button"
