@@ -1,4 +1,4 @@
-package com.example.projet_eq2_desjim;
+package bdd;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
