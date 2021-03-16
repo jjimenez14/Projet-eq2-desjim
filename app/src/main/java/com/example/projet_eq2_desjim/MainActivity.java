@@ -16,21 +16,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout_menu);
 
 
-        Button yourButton = (Button) findViewById(R.id.buttonNvVisite);
+        Button btnAdmin = (Button) findViewById(R.id.buttonAdmin);
+        Button btnNewVisite = (Button) findViewById(R.id.buttonNvVisite);
+        Button btnListeVisites = (Button) findViewById(R.id.buttonConsultVisite);
 
-        yourButton.setOnClickListener(new OnClickListener(){
+
+        OnClickListener ecouteur = new OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
+                switch(v.getId()) {
+                    case R.id.buttonNvVisite:
+                    startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
+                    break;
+                    case R.id.buttonAdmin:
+                        startActivity(new Intent(MainActivity.this, AdminActivity.class));
+                        break;
+                    case R.id.buttonConsultVisite:
+                        startActivity(new Intent(MainActivity.this, ListeVisitesActivity.class));
+                        break;
+                }
             }
-        });
+        };
 
-        
-
-
-
-
-
-
+        btnAdmin.setOnClickListener(ecouteur);
+        btnNewVisite.setOnClickListener(ecouteur);
+        btnListeVisites.setOnClickListener(ecouteur);
 
     }
 }
