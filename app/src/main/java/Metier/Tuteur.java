@@ -4,18 +4,18 @@ public class Tuteur {
 
 
     int id;
-    int idEntreprise;
+    int idEntrepriset;
     String nom;
     String prenom;
     String email;
     String numTel;
 
-    public int getIdEntreprise() {
-        return idEntreprise;
+    public int getIdEntrepriset() {
+        return idEntrepriset;
     }
 
-    public void setIdEntreprise(int idEntreprise) {
-        this.idEntreprise = idEntreprise;
+    public void setIdEntrepriset(int idEntrepriset) {
+        this.idEntrepriset = idEntrepriset;
     }
 
     public int getId() {
