@@ -13,9 +13,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_connexion);
-        //on associe à un objet java de type Button, un widget repéré physiquement par son id
-        Button btnNvVisite = findViewById(R.id.buttonNvVisite);
+        setContentView(R.layout.layout_menu);
+
+
+        Button yourButton = (Button) findViewById(R.id.buttonNvVisite);
+
+        yourButton.setOnClickListener(new OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
+            }
+        });
 
         
 

@@ -4,10 +4,19 @@ public class Tuteur {
 
 
     int id;
+    int idEntreprise;
     String nom;
     String prenom;
     String email;
     String numTel;
+
+    public int getIdEntreprise() {
+        return idEntreprise;
+    }
+
+    public void setIdEntreprise(int idEntreprise) {
+        this.idEntreprise = idEntreprise;
+    }
 
     public int getId() {
         return id;

@@ -3,6 +3,9 @@ package Metier;
 public class Visite {
 
     int id;
+    int idEtudiant;
+    int idTuteur;
+    int idProfesseur;
     String date;
     String conditions;
     String bilan;
@@ -11,6 +14,30 @@ public class Visite {
     boolean participation;
     boolean opportunite;
     String session;
+
+    public int getIdEtudiant() {
+        return idEtudiant;
+    }
+
+    public void setIdEtudiant(int idEtudiant) {
+        this.idEtudiant = idEtudiant;
+    }
+
+    public int getIdTuteur() {
+        return idTuteur;
+    }
+
+    public void setIdTuteur(int idTuteur) {
+        this.idTuteur = idTuteur;
+    }
+
+    public int getIdProfesseur() {
+        return idProfesseur;
+    }
+
+    public void setIdProfesseur(int idProfesseur) {
+        this.idProfesseur = idProfesseur;
+    }
 
     public int getId() {
         return id;
