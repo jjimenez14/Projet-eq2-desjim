@@ -3,11 +3,11 @@ package bdd;
 import android.content.Context;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.Cursor;
 
-import Metier.Entreprise;
 
-public class bddDAO {
+import Metier.*;
+
+public class bddDAO  {
     static final int VERSION_BDD =1;
     private static final String NOM_BDD = "siobdd.db";
 
@@ -103,42 +103,42 @@ public class bddDAO {
     static final String COL_ID_PROFESSEUR_VISITE = "IdProfesseurv";
     static final int NUM_COL_ID_PROFESSEUR_VISITE = 3;
 
-    static final String COL_ID_DATE_VISITE = "DateVisite";
-    static final int NUM_COL_ID_DATE_VISITE = 4;
+    static final String COL_DATE_VISITE = "DateVisite";
+    static final int NUM_COL_DATE_VISITE = 4;
 
-    static final String COL_ID_CONDITIONS_VISITE = "ConditionsVisite";
-    static final int NUM_COL_ID_CONDITIONS_VISITE = 5;
+    static final String COL_CONDITIONS_VISITE = "ConditionsVisite";
+    static final int NUM_COL_CONDITIONS_VISITE = 5;
 
-    static final String COL_ID_BILAN_VISITE = "BilanVisite";
-    static final int NUM_COL_ID_BILAN_VISITE = 6;
+    static final String COL_BILAN_VISITE = "BilanVisite";
+    static final int NUM_COL_BILAN_VISITE = 6;
 
-    static final String COL_ID_RESOUTILS_VISITE = "ResOutilsVisite";
-    static final int NUM_COL_ID_RESOUTILS_VISITE = 7;
+    static final String COL_RESOUTILS_VISITE = "ResOutilsVisite";
+    static final int NUM_COL_RESOUTILS_VISITE = 7;
 
-    static final String COL_ID_COMMENTAIRES_VISITE = "CommentairesVisite";
-    static final int NUM_COL_ID_COMMENTAIRES_VISITE = 8;
+    static final String COL_COMMENTAIRES_VISITE = "CommentairesVisite";
+    static final int NUM_COL_COMMENTAIRES_VISITE = 8;
 
-    static final String COL_ID_PARTICIPATION_VISITE = "ParticipationVisite";
-    static final int NUM_COL_ID_PARTICIPATION_VISITE = 9;
+    static final String COL_PARTICIPATION_VISITE = "ParticipationVisite";
+    static final int NUM_COL_PARTICIPATION_VISITE = 9;
 
-    static final String COL_ID_OPPORTUNITE_VISITE = "OpportunitéVisite";
-    static final int NUM_COL_ID_OPPORTUNITE_VISITE = 10;
+    static final String COL_OPPORTUNITE_VISITE = "OpportunitéVisite";
+    static final int NUM_COL_OPPORTUNITE_VISITE = 10;
 
-    static final String COL_ID_SESSION_VISITE = "SessionVisite";
-    static final int NUM_COL_ID_SESSION_VISITE = 11;
+    static final String COL_SESSION_VISITE = "SessionVisite";
+    static final int NUM_COL_SESSION_VISITE = 11;
 
 //--------------------------------------------------------------------------------------------------
-    private bddDAO tableCourante;
+    private CreateBDD tableCourante;
     private Context context;
     private SQLiteDatabase db;
 
     public bddDAO (Context context){
         this.context = context;
-        tableCourante = new bddDAO(context);
+        tableCourante = new CreateBDD(context, NOM_BDD, null, VERSION_BDD);
     }
 
     public bddDAO open(){
-        db = tableCourante.getWritableDataBase();
+        db = tableCourante.getWritableDatabase();
         return this;
     }
 
@@ -147,10 +147,7 @@ public class bddDAO {
         return null;
     }
 
-
-
-
-
+//--------------------------------------------------------------------------------------------------
 
     public long insererEntreprise (Entreprise uneEntreprise){
         //Création d'un ContentValues (fonctionne comme une HashMap)
@@ -163,4 +160,75 @@ public class bddDAO {
         //on insère l'objet dans la BDD via le ContentValues
         return db.insert(TABLE_ENTREPRISE, null, values);
     }
+
+//--------------------------------------------------------------------------------------------------
+
+    public long insererEtudiant (Etudiant unEtudiant){
+        //Création d'un ContentValues (fonctionne comme une HashMap)
+        ContentValues values = new ContentValues();
+        //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne où on veut mettre la valeur)
+        values.put(COL_NOM_ETUDIANT, unEtudiant.getNom());
+        values.put(COL_PRENOM_ETUDIANT, unEtudiant.getPrenom());
+        values.put(COL_CLASSE_ETUDIANT, unEtudiant.getClasse());
+        values.put(COL_ANNEE_ETUDIANT, unEtudiant.getAnnee());
+
+        //on insère l'objet dans la BDD via le ContentValues
+        return db.insert(TABLE_ETUDIANT, null, values);
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    public long insererProfesseur (Professeur unProfesseur){
+        //Création d'un ContentValues (fonctionne comme une HashMap)
+        ContentValues values = new ContentValues();
+        //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne où on veut mettre la valeur)
+        values.put(COL_NOM_PROFESSEUR, unProfesseur.getNom());
+        values.put(COL_PRENOM_PROFESSEUR, unProfesseur.getPrenom());
+        values.put(COL_EMAIL_PROFESSEUR, unProfesseur.getEmail());
+        values.put(COL_NUMTEL_PROFESSEUR, unProfesseur.getNumTel());
+
+
+        //on insère l'objet dans la BDD via le ContentValues
+        return db.insert(TABLE_PROFESSEUR, null, values);
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    public long insererTuteur (Tuteur unTuteur){
+        //Création d'un ContentValues (fonctionne comme une HashMap)
+        ContentValues values = new ContentValues();
+        //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne où on veut mettre la valeur)
+        values.put(COL_ID_ENTREPRISE_TUTEUR, unTuteur.getIdEntrepriset());
+        values.put(COL_NOM_TUTEUR, unTuteur.getNom());
+        values.put(COL_PRENOM_TUTEUR, unTuteur.getPrenom());
+        values.put(COL_EMAIL_TUTEUR, unTuteur.getEmail());
+        values.put(COL_NUMTEL_TUTEUR, unTuteur.getNumTel());
+
+
+        //on insère l'objet dans la BDD via le ContentValues
+        return db.insert(TABLE_TUTEUR, null, values);
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    public long insererVisite (Visite uneVisite){
+        //Création d'un ContentValues (fonctionne comme une HashMap)
+        ContentValues values = new ContentValues();
+        //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne où on veut mettre la valeur)
+        values.put(COL_ID_ETUDIANT_VISITE, uneVisite.getIdEtudiant());
+        values.put(COL_ID_TUTEUR_VISITE, uneVisite.getIdTuteur());
+        values.put(COL_ID_PROFESSEUR_VISITE, uneVisite.getIdProfesseur());
+        values.put(COL_DATE_VISITE, uneVisite.getDate());
+        values.put(COL_CONDITIONS_VISITE, uneVisite.getConditions());
+        values.put(COL_BILAN_VISITE, uneVisite.getBilan());
+        values.put(COL_RESOUTILS_VISITE, uneVisite.getResOutils());
+        values.put(COL_COMMENTAIRES_VISITE, uneVisite.getCommentaires());
+        values.put(COL_PARTICIPATION_VISITE, uneVisite.isParticipation());
+        values.put(COL_OPPORTUNITE_VISITE, uneVisite.isOpportunite());
+        values.put(COL_SESSION_VISITE, uneVisite.getSession());
+
+        //on insère l'objet dans la BDD via le ContentValues
+        return db.insert(TABLE_VISITE, null, values);
+    }
+
 }
