@@ -7,6 +7,13 @@ public class Entreprise {
     String adresse;
     String numTel;
 
+    public Entreprise(int id, String nom, String adresse, String numTel) {
+        this.id = id;
+        this.nom = nom;
+        this.adresse = adresse;
+        this.numTel = numTel;
+    }
+
     public int getId() {
         return id;
     }
