@@ -223,8 +223,8 @@ public class bddDAO  {
         values.put(COL_BILAN_VISITE, uneVisite.getBilan());
         values.put(COL_RESOUTILS_VISITE, uneVisite.getResOutils());
         values.put(COL_COMMENTAIRES_VISITE, uneVisite.getCommentaires());
-        values.put(COL_PARTICIPATION_VISITE, uneVisite.isParticipation());
-        values.put(COL_OPPORTUNITE_VISITE, uneVisite.isOpportunite());
+        values.put(COL_PARTICIPATION_VISITE, uneVisite.getParticipation());
+        values.put(COL_OPPORTUNITE_VISITE, uneVisite.getOpportunite());
         values.put(COL_SESSION_VISITE, uneVisite.getSession());
 
         //on insère l'objet dans la BDD via le ContentValues

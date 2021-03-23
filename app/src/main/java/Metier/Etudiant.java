@@ -8,6 +8,14 @@ public class Etudiant {
     String classe;
     int annee;
 
+    public Etudiant(int id, String nom, String prenom, String classe, int annee) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.classe = classe;
+        this.annee = annee;
+    }
+
     public int getId() {
         return id;
     }

@@ -11,9 +11,24 @@ public class Visite {
     String bilan;
     String resOutils;
     String commentaires;
-    boolean participation;
-    boolean opportunite;
+    int participation;
+    int opportunite;
     String session;
+
+    public Visite(int id, int idEtudiant, int idTuteur, int idProfesseur, String date, String conditions, String bilan, String resOutils, String commentaires, int participation, int opportunite, String session) {
+        this.id = id;
+        this.idEtudiant = idEtudiant;
+        this.idTuteur = idTuteur;
+        this.idProfesseur = idProfesseur;
+        this.date = date;
+        this.conditions = conditions;
+        this.bilan = bilan;
+        this.resOutils = resOutils;
+        this.commentaires = commentaires;
+        this.participation = participation;
+        this.opportunite = opportunite;
+        this.session = session;
+    }
 
     public int getIdEtudiant() {
         return idEtudiant;
@@ -87,19 +102,19 @@ public class Visite {
         this.commentaires = commentaires;
     }
 
-    public boolean isParticipation() {
+    public int getParticipation() {
         return participation;
     }
 
-    public void setParticipation(boolean participation) {
+    public void setParticipation(int participation) {
         this.participation = participation;
     }
 
-    public boolean isOpportunite() {
+    public int getOpportunite() {
         return opportunite;
     }
 
-    public void setOpportunite(boolean opportunite) {
+    public void setOpportunite(int opportunite) {
         this.opportunite = opportunite;
     }
 

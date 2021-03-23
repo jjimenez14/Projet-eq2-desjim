@@ -116,9 +116,9 @@ public class CreateBDD extends SQLiteOpenHelper {
             + COL_COMMENTAIRES_VISITE
             + " TEXT NOT NULL, "
             + COL_PARTICIPATION_VISITE
-            + " BOOLEAN NOT NULL, "
+            + " INTEGER NOT NULL, "
             + COL_OPPORTUNITE_VISITE
-            + " BOOLEAN NOT NULL, "
+            + " INTEGER NOT NULL, "
             + COL_SESSION_VISITE
             + " TEXT NOT NULL);";
 

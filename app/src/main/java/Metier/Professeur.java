@@ -8,6 +8,14 @@ public class Professeur {
     String email;
     String numTel;
 
+    public Professeur(int id, String nom, String prenom, String email, String numTel) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.numTel = numTel;
+    }
+
     public int getId() {
         return id;
     }
