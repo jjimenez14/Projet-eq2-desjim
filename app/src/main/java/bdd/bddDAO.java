@@ -2,13 +2,14 @@ package bdd;
 
 import android.content.Context;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 
 import Metier.*;
 
 public class bddDAO  {
-    static final int VERSION_BDD =1;
+    static final int VERSION_BDD =4;
     private static final String NOM_BDD = "siobdd.db";
 
 //--------------------------------------------------------------------------------------------------
@@ -229,6 +230,22 @@ public class bddDAO  {
 
         //on insère l'objet dans la BDD via le ContentValues
         return db.insert(TABLE_VISITE, null, values);
+    }
+
+    public Cursor getDataEtudiant(){
+        return db.rawQuery("SELECT * FROM table_etudiant",null);
+    }
+    public Cursor getDataEntreprise(){
+        return db.rawQuery("SELECT * FROM table_entreprise",null);
+    }
+    public Cursor getDataProfesseur(){
+        return db.rawQuery("SELECT * FROM table_professeur",null);
+    }
+    public Cursor getDataTuteur(){
+        return db.rawQuery("SELECT * FROM table_tuteur",null);
+    }
+    public Cursor getDataVisite(){
+        return db.rawQuery("SELECT * FROM table_visite",null);
     }
 
 }

@@ -45,7 +45,7 @@ public class CreateBDD extends SQLiteOpenHelper {
     static final String COL_ID_PROFESSEUR = "_idprofesseur";
     private static final String COL_NOM_PROFESSEUR = "NomProfesseur";
     private static final String COL_PRENOM_PROFESSEUR = "PrenomProfesseur";
-    private static final String COL_EMAIL_PROFESSEUR = "EmailEntreprise";
+    private static final String COL_EMAIL_PROFESSEUR = "EmailProfesseur";
     private static final String COL_NUMTEL_PROFESSEUR = "NumTelProfesseur";
 
     private static final String CREATE_TABLE_PROFESSEUR = "CREATE TABLE " + TABLE_PROFESSEUR +  " (" +COL_ID_PROFESSEUR
