@@ -237,18 +237,33 @@ public class bddDAO  {
     public Cursor getDataEtudiant(){
         return db.rawQuery("SELECT * FROM table_etudiant",null);
     }
+
     public Cursor getDataEntreprise(){
         return db.rawQuery("SELECT * FROM table_entreprise",null);
     }
+
     public Cursor getDataProfesseur(){
         return db.rawQuery("SELECT * FROM table_professeur",null);
     }
+
     public Cursor getDataTuteur(){
         return db.rawQuery("SELECT * FROM table_tuteur",null);
     }
+
     public Cursor getDataVisite(){
         return db.rawQuery("SELECT * FROM table_visite",null);
     }
+
+    public Cursor getDataEtudiantById(int idetudiant){ return db.rawQuery("SELECT * FROM table_etudiant WHERE _idetudiant = " + "\"" + idetudiant + "\"",null);}
+
+    public Cursor getDataEntrepriseById(int identreprise){ return db.rawQuery("SELECT * FROM table_entreprise WHERE _identreprise = " + "\"" + identreprise + "\"",null);}
+
+    public Cursor getDataProfesseurById(int idprofesseur){ return db.rawQuery("SELECT * FROM table_professeur WHERE _idprofesseur = " + "\"" + idprofesseur + "\"",null);}
+
+    public Cursor getDataTuteurById(int idtuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE _idtuteur = " + "\"" + idtuteur + "\"",null);}
+
+    public Cursor getDataVisiteById(int idvisite){ return db.rawQuery("SELECT * FROM table_visite WHERE _idvisite = " + "\"" + idvisite + "\"",null);}
+
 
 //--------------------------------------------------------------------------------------------------
 

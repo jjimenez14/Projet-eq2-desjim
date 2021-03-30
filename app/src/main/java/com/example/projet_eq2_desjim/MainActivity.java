@@ -90,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_menu);
-        remplirTableEtudiant();
-        remplirTableEntreprise();
-        remplirTableProfesseur();
-        remplirTuteur();
-        remplirVisite();
+      // remplirTableEtudiant();
+      // remplirTableEntreprise();
+      // remplirTableProfesseur();
+      //  remplirTuteur();
+      //  remplirVisite();
 
         Button btnAdmin = (Button) findViewById(R.id.buttonAdmin);
         Button btnNewVisite = (Button) findViewById(R.id.buttonNvVisite);
