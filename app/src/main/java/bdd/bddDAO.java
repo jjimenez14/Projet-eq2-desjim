@@ -14,119 +14,119 @@ public class bddDAO  {
 
 //--------------------------------------------------------------------------------------------------
 
-    static final String TABLE_ENTREPRISE = "table_entreprise";
+    public static final String TABLE_ENTREPRISE = "table_entreprise";
 
-    static final String COL_ID_ENTREPRISE = "_identreprise";
-    static final int NUM_COL_ID_ENTREPRISE = 0;
+    public static final String COL_ID_ENTREPRISE = "_identreprise";
+    public static final int NUM_COL_ID_ENTREPRISE = 0;
 
-    static final String COL_NOM_ENTREPRISE = "NomEntreprise";
-    static final int NUM_COL_NOM_ENTREPRISE = 1;
+    public static final String COL_NOM_ENTREPRISE = "NomEntreprise";
+    public static final int NUM_COL_NOM_ENTREPRISE = 1;
 
-    static final String COL_ADRESSE_ENTREPRISE = "AdresseEntreprise";
-    static final int NUM_COL_ADRESSE_ENTREPRISE = 2;
+    public static final String COL_ADRESSE_ENTREPRISE = "AdresseEntreprise";
+    public static final int NUM_COL_ADRESSE_ENTREPRISE = 2;
 
-    static final String COL_NUMTEL_ENTREPRISE = "NumTelEntreprise";
-    static final int NUM_COL_NUMTEL_ENTREPRISE = 3;
-
-//--------------------------------------------------------------------------------------------------
-
-    static final String TABLE_ETUDIANT = "table_etudiant";
-
-    static final String COL_ID_ETUDIANT = "_idetudiant";
-    static final int NUM_COL_ID_ETUDIANT = 0;
-
-    static final String COL_NOM_ETUDIANT = "NomEtudiant";
-    static final int NUM_COL_NOM_ETUDIANT = 1;
-
-    static final String COL_PRENOM_ETUDIANT = "PrenomEtudiant";
-    static final int NUM_COL_PRENOM_ETUDIANT = 2;
-
-    static final String COL_CLASSE_ETUDIANT = "Classe";
-    static final int NUM_COL_CLASSE_ETUDIANT = 3;
-
-    static final String COL_ANNEE_ETUDIANT = "Année";
-    static final int NUM_COL_ANNEE_ETUDIANT = 4;
+    public static final String COL_NUMTEL_ENTREPRISE = "NumTelEntreprise";
+    public static final int NUM_COL_NUMTEL_ENTREPRISE = 3;
 
 //--------------------------------------------------------------------------------------------------
 
-    static final String TABLE_PROFESSEUR = "table_professeur";
+    public static final String TABLE_ETUDIANT = "table_etudiant";
 
-    static final String COL_ID_PROFESSEUR = "_idprofesseur";
-    static final int NUM_COL_ID_PROFESSEUR = 0;
+    public static final String COL_ID_ETUDIANT = "_idetudiant";
+    public static final int NUM_COL_ID_ETUDIANT = 0;
 
-    static final String COL_NOM_PROFESSEUR = "NomProfesseur";
-    static final int NUM_COL_NOM_PROFESSEUR = 1;
+    public static final String COL_NOM_ETUDIANT = "NomEtudiant";
+    public static final int NUM_COL_NOM_ETUDIANT = 1;
 
-    static final String COL_PRENOM_PROFESSEUR = "PrenomProfesseur";
-    static final int NUM_COL_PRENOM_PROFESSEUR = 2;
+    public static final String COL_PRENOM_ETUDIANT = "PrenomEtudiant";
+    public static final int NUM_COL_PRENOM_ETUDIANT = 2;
 
-    static final String COL_EMAIL_PROFESSEUR = "EmailProfesseur";
-    static final int NUM_COL_EMAIL_PROFESSEUR = 3;
+    public static final String COL_CLASSE_ETUDIANT = "Classe";
+    public static final int NUM_COL_CLASSE_ETUDIANT = 3;
 
-    static final String COL_NUMTEL_PROFESSEUR = "NumTelProfesseur";
-    static final int NUM_COL_NUMTEL_PROFESSEUR = 4;
-
-//--------------------------------------------------------------------------------------------------
-
-    static final String TABLE_TUTEUR = "table_tuteur";
-
-    static final String COL_ID_TUTEUR = "_idtuteur";
-    static final int NUM_COL_ID_TUTEUR = 0;
-
-    static final String COL_ID_ENTREPRISE_TUTEUR = "IdEntrepriset";
-    static final int NUM_COL_ID_ENTREPRISE_TUTEUR = 1;
-
-    static final String COL_NOM_TUTEUR = "NomTuteur";
-    static final int NUM_COL_NOM_TUTEUR = 2;
-
-    static final String COL_PRENOM_TUTEUR = "PrenomTuteur";
-    static final int NUM_COL_PRENOM_TUTEUR = 3;
-
-    static final String COL_EMAIL_TUTEUR = "EmailTuteur";
-    static final int NUM_COL_EMAIL_TUTEUR = 4;
-
-    static final String COL_NUMTEL_TUTEUR = "NumTelTuteur";
-    static final int NUM_COL_NUMTEL_TUTEUR = 5;
+    public static final String COL_ANNEE_ETUDIANT = "Année";
+    public static final int NUM_COL_ANNEE_ETUDIANT = 4;
 
 //--------------------------------------------------------------------------------------------------
 
-    static final String TABLE_VISITE = "table_visite";
+    public static final String TABLE_PROFESSEUR = "table_professeur";
 
-    static final String COL_ID_VISITE = "_idvisite";
-    static final int NUM_COL_ID_VISITE = 0;
+    public static final String COL_ID_PROFESSEUR = "_idprofesseur";
+    public static final int NUM_COL_ID_PROFESSEUR = 0;
 
-    static final String COL_ID_ETUDIANT_VISITE = "IdEtudiantv";
-    static final int NUM_COL_ID_ETUDIANT_VISITE = 1;
+    public static final String COL_NOM_PROFESSEUR = "NomProfesseur";
+    public static final int NUM_COL_NOM_PROFESSEUR = 1;
 
-    static final String COL_ID_TUTEUR_VISITE = "IdTuteurv";
-    static final int NUM_COL_ID_TUTEUR_VISITE = 2;
+    public static final String COL_PRENOM_PROFESSEUR = "PrenomProfesseur";
+    public static final int NUM_COL_PRENOM_PROFESSEUR = 2;
 
-    static final String COL_ID_PROFESSEUR_VISITE = "IdProfesseurv";
-    static final int NUM_COL_ID_PROFESSEUR_VISITE = 3;
+    public static final String COL_EMAIL_PROFESSEUR = "EmailProfesseur";
+    public static final int NUM_COL_EMAIL_PROFESSEUR = 3;
 
-    static final String COL_DATE_VISITE = "DateVisite";
-    static final int NUM_COL_DATE_VISITE = 4;
+    public static final String COL_NUMTEL_PROFESSEUR = "NumTelProfesseur";
+    public static final int NUM_COL_NUMTEL_PROFESSEUR = 4;
 
-    static final String COL_CONDITIONS_VISITE = "ConditionsVisite";
-    static final int NUM_COL_CONDITIONS_VISITE = 5;
+//--------------------------------------------------------------------------------------------------
 
-    static final String COL_BILAN_VISITE = "BilanVisite";
-    static final int NUM_COL_BILAN_VISITE = 6;
+    public static final String TABLE_TUTEUR = "table_tuteur";
 
-    static final String COL_RESOUTILS_VISITE = "ResOutilsVisite";
-    static final int NUM_COL_RESOUTILS_VISITE = 7;
+    public static final String COL_ID_TUTEUR = "_idtuteur";
+    public static final int NUM_COL_ID_TUTEUR = 0;
 
-    static final String COL_COMMENTAIRES_VISITE = "CommentairesVisite";
-    static final int NUM_COL_COMMENTAIRES_VISITE = 8;
+    public static final String COL_ID_ENTREPRISE_TUTEUR = "IdEntrepriset";
+    public static final int NUM_COL_ID_ENTREPRISE_TUTEUR = 1;
 
-    static final String COL_PARTICIPATION_VISITE = "ParticipationVisite";
-    static final int NUM_COL_PARTICIPATION_VISITE = 9;
+    public static final String COL_NOM_TUTEUR = "NomTuteur";
+    public static final int NUM_COL_NOM_TUTEUR = 2;
 
-    static final String COL_OPPORTUNITE_VISITE = "OpportunitéVisite";
-    static final int NUM_COL_OPPORTUNITE_VISITE = 10;
+    public static final String COL_PRENOM_TUTEUR = "PrenomTuteur";
+    public static final int NUM_COL_PRENOM_TUTEUR = 3;
 
-    static final String COL_SESSION_VISITE = "SessionVisite";
-    static final int NUM_COL_SESSION_VISITE = 11;
+    public static final String COL_EMAIL_TUTEUR = "EmailTuteur";
+    public static final int NUM_COL_EMAIL_TUTEUR = 4;
+
+    public static final String COL_NUMTEL_TUTEUR = "NumTelTuteur";
+    public static final int NUM_COL_NUMTEL_TUTEUR = 5;
+
+//--------------------------------------------------------------------------------------------------
+
+    public static final String TABLE_VISITE = "table_visite";
+
+    public static final String COL_ID_VISITE = "_idvisite";
+    public static final int NUM_COL_ID_VISITE = 0;
+
+    public static final String COL_ID_ETUDIANT_VISITE = "IdEtudiantv";
+    public static final int NUM_COL_ID_ETUDIANT_VISITE = 1;
+
+    public static final String COL_ID_TUTEUR_VISITE = "IdTuteurv";
+    public static final int NUM_COL_ID_TUTEUR_VISITE = 2;
+
+    public static final String COL_ID_PROFESSEUR_VISITE = "IdProfesseurv";
+    public static final int NUM_COL_ID_PROFESSEUR_VISITE = 3;
+
+    public static final String COL_DATE_VISITE = "DateVisite";
+    public static final int NUM_COL_DATE_VISITE = 4;
+
+    public static final String COL_CONDITIONS_VISITE = "ConditionsVisite";
+    public static final int NUM_COL_CONDITIONS_VISITE = 5;
+
+    public static final String COL_BILAN_VISITE = "BilanVisite";
+    public static final int NUM_COL_BILAN_VISITE = 6;
+
+    public static final String COL_RESOUTILS_VISITE = "ResOutilsVisite";
+    public static final int NUM_COL_RESOUTILS_VISITE = 7;
+
+    public static final String COL_COMMENTAIRES_VISITE = "CommentairesVisite";
+    public static final int NUM_COL_COMMENTAIRES_VISITE = 8;
+
+    public static final String COL_PARTICIPATION_VISITE = "ParticipationVisite";
+    public static final int NUM_COL_PARTICIPATION_VISITE = 9;
+
+    public static final String COL_OPPORTUNITE_VISITE = "OpportunitéVisite";
+    public static final int NUM_COL_OPPORTUNITE_VISITE = 10;
+
+    public static final String COL_SESSION_VISITE = "SessionVisite";
+    public static final int NUM_COL_SESSION_VISITE = 11;
 
 //--------------------------------------------------------------------------------------------------
     private CreateBDD tableCourante;
@@ -263,7 +263,6 @@ public class bddDAO  {
     public Cursor getDataTuteurById(int idtuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE _idtuteur = " + "\"" + idtuteur + "\"",null);}
 
     public Cursor getDataVisiteById(int idvisite){ return db.rawQuery("SELECT * FROM table_visite WHERE _idvisite = " + "\"" + idvisite + "\"",null);}
-
 
 //--------------------------------------------------------------------------------------------------
 
