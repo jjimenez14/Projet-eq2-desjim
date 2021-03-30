@@ -20,13 +20,13 @@ public class bddDAO  {
     static final int NUM_COL_ID_ENTREPRISE = 0;
 
     static final String COL_NOM_ENTREPRISE = "NomEntreprise";
-    static final int NUM_COL_NOM_LACL = 1;
+    static final int NUM_COL_NOM_ENTREPRISE = 1;
 
     static final String COL_ADRESSE_ENTREPRISE = "AdresseEntreprise";
-    static final int NUM_COL_COORDONNEES = 2;
+    static final int NUM_COL_ADRESSE_ENTREPRISE = 2;
 
     static final String COL_NUMTEL_ENTREPRISE = "NumTelEntreprise";
-    static final int NUM_COL_NUMTEL = 3;
+    static final int NUM_COL_NUMTEL_ENTREPRISE = 3;
 
 //--------------------------------------------------------------------------------------------------
 
@@ -232,6 +232,8 @@ public class bddDAO  {
         return db.insert(TABLE_VISITE, null, values);
     }
 
+//--------------------------------------------------------------------------------------------------
+
     public Cursor getDataEtudiant(){
         return db.rawQuery("SELECT * FROM table_etudiant",null);
     }
@@ -246,6 +248,103 @@ public class bddDAO  {
     }
     public Cursor getDataVisite(){
         return db.rawQuery("SELECT * FROM table_visite",null);
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    private Etudiant cursorToEtudiant(Cursor c){
+
+        if (c.getCount() == 0)
+            return null;
+        c.moveToFirst(); //on se place sur le premier élément
+        Etudiant unEtudiant = new Etudiant(0,null,null,null, 0); //On créé un étudiant
+        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unEtudiant.setNom(c.getString(NUM_COL_NOM_ETUDIANT));
+        unEtudiant.setPrenom(c.getString(NUM_COL_PRENOM_ETUDIANT));
+        unEtudiant.setClasse(c.getString(NUM_COL_CLASSE_ETUDIANT));
+        unEtudiant.setAnnee(c.getInt(NUM_COL_ANNEE_ETUDIANT));
+
+        c.close(); //On ferme le cursor
+        return unEtudiant; //On retourne l'étudiant
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    private Entreprise cursorToEntreprise(Cursor c){
+
+        if (c.getCount() == 0)
+            return null;
+        c.moveToFirst(); //on se place sur le premier élément
+        Entreprise uneEntreprise = new Entreprise(0,null,null,null); //On créé un étudiant
+        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        uneEntreprise.setNom(c.getString(NUM_COL_NOM_ENTREPRISE));
+        uneEntreprise.setAdresse(c.getString(NUM_COL_ADRESSE_ENTREPRISE));
+        uneEntreprise.setNumTel(c.getString(NUM_COL_NUMTEL_ENTREPRISE));
+
+        c.close(); //On ferme le cursor
+        return uneEntreprise; //On retourne l'entreprise
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    private Professeur cursorToProfesseur(Cursor c){
+
+        if (c.getCount() == 0)
+            return null;
+        c.moveToFirst(); //on se place sur le premier élément
+        Professeur unProfesseur = new Professeur(0,null,null,null, null); //On créé un étudiant
+        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unProfesseur.setNom(c.getString(NUM_COL_NOM_PROFESSEUR));
+        unProfesseur.setPrenom(c.getString(NUM_COL_PRENOM_PROFESSEUR));
+        unProfesseur.setEmail(c.getString(NUM_COL_EMAIL_PROFESSEUR));
+        unProfesseur.setNumTel(c.getString(NUM_COL_NUMTEL_PROFESSEUR));
+
+        c.close(); //On ferme le cursor
+        return unProfesseur; //On retourne le professeur
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    private Visite cursorToVisite(Cursor c){
+
+        if (c.getCount() == 0)
+            return null;
+        c.moveToFirst(); //on se place sur le premier élément
+        Visite uneVisite = new Visite(0,0,0,0, null, null, null, null, null , 0, 0, null); //On créé un étudiant
+        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        uneVisite.setIdEtudiant(c.getInt(NUM_COL_ID_ETUDIANT_VISITE));
+        uneVisite.setIdTuteur(c.getInt(NUM_COL_ID_TUTEUR_VISITE));
+        uneVisite.setIdProfesseur(c.getInt(NUM_COL_ID_PROFESSEUR_VISITE));
+        uneVisite.setDate(c.getString(NUM_COL_DATE_VISITE));
+        uneVisite.setConditions(c.getString(NUM_COL_CONDITIONS_VISITE));
+        uneVisite.setBilan(c.getString(NUM_COL_BILAN_VISITE));
+        uneVisite.setResOutils(c.getString(NUM_COL_RESOUTILS_VISITE));
+        uneVisite.setCommentaires(c.getString(NUM_COL_COMMENTAIRES_VISITE));
+        uneVisite.setParticipation(c.getInt(NUM_COL_PARTICIPATION_VISITE));
+        uneVisite.setOpportunite(c.getInt(NUM_COL_OPPORTUNITE_VISITE));
+        uneVisite.setSession(c.getString(NUM_COL_SESSION_VISITE));
+
+        c.close(); //On ferme le cursor
+        return uneVisite; //On retourne la visite
+    }
+
+//--------------------------------------------------------------------------------------------------
+
+    private Tuteur cursorToTuteur(Cursor c){
+
+        if (c.getCount() == 0)
+            return null;
+        c.moveToFirst(); //on se place sur le premier élément
+        Tuteur unTuteur = new Tuteur(0,0,null,null, null, null); //On créé un étudiant
+        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unTuteur.setIdEntrepriset(c.getInt(NUM_COL_ID_ENTREPRISE_TUTEUR));
+        unTuteur.setNom(c.getString(NUM_COL_NOM_TUTEUR));
+        unTuteur.setPrenom(c.getString(NUM_COL_PRENOM_TUTEUR));
+        unTuteur.setEmail(c.getString(NUM_COL_EMAIL_TUTEUR));
+        unTuteur.setNumTel(c.getString(NUM_COL_NUMTEL_TUTEUR));
+
+        c.close(); //On ferme le cursor
+        return unTuteur; //On retourne le tuteur
     }
 
 }
