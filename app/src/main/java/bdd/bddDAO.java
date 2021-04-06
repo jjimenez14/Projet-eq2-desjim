@@ -9,14 +9,14 @@ import android.database.sqlite.SQLiteDatabase;
 import Metier.*;
 
 public class bddDAO  {
-    static final int VERSION_BDD =4;
+    static final int VERSION_BDD =10;
     private static final String NOM_BDD = "siobdd.db";
 
 //--------------------------------------------------------------------------------------------------
 
     public static final String TABLE_ENTREPRISE = "table_entreprise";
 
-    public static final String COL_ID_ENTREPRISE = "_identreprise";
+    public static final String COL_ID_ENTREPRISE = "_id";
     public static final int NUM_COL_ID_ENTREPRISE = 0;
 
     public static final String COL_NOM_ENTREPRISE = "NomEntreprise";
@@ -32,7 +32,7 @@ public class bddDAO  {
 
     public static final String TABLE_ETUDIANT = "table_etudiant";
 
-    public static final String COL_ID_ETUDIANT = "_idetudiant";
+    public static final String COL_ID_ETUDIANT = "_id";
     public static final int NUM_COL_ID_ETUDIANT = 0;
 
     public static final String COL_NOM_ETUDIANT = "NomEtudiant";
@@ -51,7 +51,7 @@ public class bddDAO  {
 
     public static final String TABLE_PROFESSEUR = "table_professeur";
 
-    public static final String COL_ID_PROFESSEUR = "_idprofesseur";
+    public static final String COL_ID_PROFESSEUR = "_id";
     public static final int NUM_COL_ID_PROFESSEUR = 0;
 
     public static final String COL_NOM_PROFESSEUR = "NomProfesseur";
@@ -70,7 +70,7 @@ public class bddDAO  {
 
     public static final String TABLE_TUTEUR = "table_tuteur";
 
-    public static final String COL_ID_TUTEUR = "_idtuteur";
+    public static final String COL_ID_TUTEUR = "_id";
     public static final int NUM_COL_ID_TUTEUR = 0;
 
     public static final String COL_ID_ENTREPRISE_TUTEUR = "IdEntrepriset";
@@ -92,7 +92,7 @@ public class bddDAO  {
 
     public static final String TABLE_VISITE = "table_visite";
 
-    public static final String COL_ID_VISITE = "_idvisite";
+    public static final String COL_ID_VISITE = "_id";
     public static final int NUM_COL_ID_VISITE = 0;
 
     public static final String COL_ID_ETUDIANT_VISITE = "IdEtudiantv";
@@ -254,15 +254,21 @@ public class bddDAO  {
         return db.rawQuery("SELECT * FROM table_visite",null);
     }
 
-    public Cursor getDataEtudiantById(int idetudiant){ return db.rawQuery("SELECT * FROM table_etudiant WHERE _idetudiant = " + "\"" + idetudiant + "\"",null);}
+    public Cursor getDataEtudiantById(int idetudiant){ return db.rawQuery("SELECT * FROM table_etudiant WHERE _id = " + "\"" + idetudiant + "\"",null);}
 
-    public Cursor getDataEntrepriseById(int identreprise){ return db.rawQuery("SELECT * FROM table_entreprise WHERE _identreprise = " + "\"" + identreprise + "\"",null);}
+    public Cursor getDataEntrepriseById(int identreprise){ return db.rawQuery("SELECT * FROM table_entreprise WHERE _id = " + "\"" + identreprise + "\"",null);}
 
-    public Cursor getDataProfesseurById(int idprofesseur){ return db.rawQuery("SELECT * FROM table_professeur WHERE _idprofesseur = " + "\"" + idprofesseur + "\"",null);}
+    public Cursor getDataProfesseurById(int idprofesseur){ return db.rawQuery("SELECT * FROM table_professeur WHERE _id = " + "\"" + idprofesseur + "\"",null);}
 
-    public Cursor getDataTuteurById(int idtuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE _idtuteur = " + "\"" + idtuteur + "\"",null);}
+    public Cursor getDataTuteurById(int idtuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE _id = " + "\"" + idtuteur + "\"",null);}
 
-    public Cursor getDataVisiteById(int idvisite){ return db.rawQuery("SELECT * FROM table_visite WHERE _idvisite = " + "\"" + idvisite + "\"",null);}
+    public Cursor getDataVisiteById(int idvisite){ return db.rawQuery("SELECT * FROM table_visite WHERE _id = " + "\"" + idvisite + "\"",null);}
+
+    public Cursor getInfoForTab(){ return db.rawQuery("SELECT v._id, e.NomEtudiant, t.NomTuteur, p.NomProfesseur, DateVisite FROM table_visite v" +
+            " INNER JOIN table_etudiant e ON v.IdEtudiantv = e._id" +
+            " INNER JOIN table_tuteur t  ON v.IdTuteurv = t._id" +
+            " INNER JOIN table_professeur p ON v.IdProfesseurv = p._id"
+            ,null);}
 
 //--------------------------------------------------------------------------------------------------
 

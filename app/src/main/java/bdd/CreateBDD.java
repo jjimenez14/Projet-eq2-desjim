@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class CreateBDD extends SQLiteOpenHelper {
 
     private static final String TABLE_ETUDIANT = "table_etudiant";
-    static final String COL_ID_ETUDIANT = "_idetudiant";
+    static final String COL_ID_ETUDIANT = "_id";
     private static final String COL_NOM_ETUDIANT = "NomEtudiant";
     private static final String COL_PRENOM_ETUDIANT = "PrenomEtudiant";
     private static final String COL_CLASSE_ETUDIANT = "Classe";
@@ -26,7 +26,7 @@ public class CreateBDD extends SQLiteOpenHelper {
 
 
     private static final String TABLE_ENTREPRISE = "table_entreprise";
-    static final String COL_ID_ENTREPRISE = "_identreprise";
+    static final String COL_ID_ENTREPRISE = "_id";
     private static final String COL_NOM_ENTREPRISE = "NomEntreprise";
     private static final String COL_ADRESSE_ENTREPRISE = "AdresseEntreprise";
     private static final String COL_NUMTEL_ENTREPRISE = "NumTelEntreprise";
@@ -42,7 +42,7 @@ public class CreateBDD extends SQLiteOpenHelper {
 
 
     private static final String TABLE_PROFESSEUR = "table_professeur";
-    static final String COL_ID_PROFESSEUR = "_idprofesseur";
+    static final String COL_ID_PROFESSEUR = "_id";
     private static final String COL_NOM_PROFESSEUR = "NomProfesseur";
     private static final String COL_PRENOM_PROFESSEUR = "PrenomProfesseur";
     private static final String COL_EMAIL_PROFESSEUR = "EmailProfesseur";
@@ -61,7 +61,7 @@ public class CreateBDD extends SQLiteOpenHelper {
 
 
     private static final String TABLE_TUTEUR = "table_tuteur";
-    static final String COL_ID_TUTEUR = "_idtuteur";
+    static final String COL_ID_TUTEUR = "_id";
     private static final String COL_ID_ENTREPRISE_TUTEUR = "IdEntrepriset";
     private static final String COL_NOM_TUTEUR = "NomTuteur";
     private static final String COL_PRENOM_TUTEUR = "PrenomTuteur";
@@ -84,7 +84,7 @@ public class CreateBDD extends SQLiteOpenHelper {
 
 
     private static final String TABLE_VISITE = "table_visite";
-    static final String COL_ID_VISITE = "_idvisite";
+    static final String COL_ID_VISITE = "_id";
     private static final String COL_ID_ETUDIANT_VISITE = "IdEtudiantv";
     private static final String COL_ID_TUTEUR_VISITE = "IdTuteurv";
     private static final String COL_ID_PROFESSEUR_VISITE = "IdProfesseurv";
