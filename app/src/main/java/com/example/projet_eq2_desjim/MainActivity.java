@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
+
 import bdd.*;
 import Metier.*;
-
-import bdd.CreateBDD;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 switch(v.getId()) {
                     case R.id.buttonNvVisite:
-                    startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
+                    startActivity(new Intent(MainActivity.this, NvVisiteActivity2.class));
                     break;
                     case R.id.buttonAdmin:
                         startActivity(new Intent(MainActivity.this, AdminActivity.class));
