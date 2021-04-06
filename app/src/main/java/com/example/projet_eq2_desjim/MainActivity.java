@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 switch(v.getId()) {
                     case R.id.buttonNvVisite:
-                    startActivity(new Intent(MainActivity.this, NvVisiteActivity2.class));
+                    startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
                     break;
                     case R.id.buttonAdmin:
                         startActivity(new Intent(MainActivity.this, AdminActivity.class));
