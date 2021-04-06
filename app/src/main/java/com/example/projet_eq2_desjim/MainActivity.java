@@ -17,15 +17,24 @@ public class MainActivity extends AppCompatActivity {
     public void remplirTableEtudiant() {
         bddDAO etudiantBdd = new bddDAO(this);
         Etudiant etudiant1 = new Etudiant(1,"Carlier","Jules","SEGPA", 2);
+        Etudiant etudiant2 = new Etudiant(2,"Desmonceaux","Baptiste","SEGPA", 2);
+        Etudiant etudiant3 = new Etudiant(3,"Jimenez","Julian","SEGPA", 2);
 
         //on ouvre la base de données
         etudiantBdd.open();
         //on insère etudiant1
         etudiantBdd.insererEtudiant(etudiant1);
+        etudiantBdd.insererEtudiant(etudiant2);
+        etudiantBdd.insererEtudiant(etudiant3);
 
         //le curseur pour afficher le nombre d'étudiant dans la base
         Cursor c = etudiantBdd.getDataEtudiant();
         System.out.println("Il y a " + String.valueOf(c.getCount()) + " étudiant(s)");
+        String[] lesEtudiants = bddDAO.cursorToEtudiant2(c);
+
+        for(int i=0; i < lesEtudiants.length; i++) {
+            System.out.println(lesEtudiants[i]);
+        }
     }
 
     public void remplirTableEntreprise() {
