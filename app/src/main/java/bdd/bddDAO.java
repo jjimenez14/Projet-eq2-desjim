@@ -6,10 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import java.util.ArrayList;
+
 import Metier.*;
 
 public class bddDAO  {
-    static final int VERSION_BDD =10;
+    static final int VERSION_BDD =12;
     private static final String NOM_BDD = "siobdd.db";
 
 //--------------------------------------------------------------------------------------------------
@@ -286,6 +288,33 @@ public class bddDAO  {
 
         c.close(); //On ferme le cursor
         return unEtudiant; //On retourne l'étudiant
+    }
+
+
+
+    public static String[] cursorToEtudiant2(Cursor c){
+        ArrayList<String> desEtudiants = new ArrayList<String>();
+        if (c.getCount() != 0) {
+
+
+            c.moveToFirst(); //on se place sur le premier élément
+
+
+
+
+            while (!c.isAfterLast()) {
+                String unEtudiant;
+                unEtudiant = c.getString(NUM_COL_NOM_ETUDIANT) + " " + c.getString(NUM_COL_PRENOM_ETUDIANT) + " " + c.getString(NUM_COL_CLASSE_ETUDIANT);
+                desEtudiants.add(unEtudiant);
+                c.moveToNext();
+
+            }
+
+            c.close(); //On ferme le cursor
+
+
+        }
+        return desEtudiants.toArray(new String[desEtudiants.size()]); //On retourne une collection d'étudiants en format String
     }
 
 //--------------------------------------------------------------------------------------------------
