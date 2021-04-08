@@ -285,7 +285,6 @@ public class bddDAO  {
         unEtudiant.setPrenom(c.getString(NUM_COL_PRENOM_ETUDIANT));
         unEtudiant.setClasse(c.getString(NUM_COL_CLASSE_ETUDIANT));
         unEtudiant.setAnnee(c.getInt(NUM_COL_ANNEE_ETUDIANT));
-
         c.close(); //On ferme le cursor
         return unEtudiant; //On retourne l'étudiant
     }
@@ -295,24 +294,14 @@ public class bddDAO  {
     public static String[] cursorToEtudiant2(Cursor c){
         ArrayList<String> desEtudiants = new ArrayList<String>();
         if (c.getCount() != 0) {
-
-
             c.moveToFirst(); //on se place sur le premier élément
-
-
-
-
             while (!c.isAfterLast()) {
                 String unEtudiant;
                 unEtudiant = c.getString(NUM_COL_NOM_ETUDIANT) + " " + c.getString(NUM_COL_PRENOM_ETUDIANT) + " " + c.getString(NUM_COL_CLASSE_ETUDIANT);
                 desEtudiants.add(unEtudiant);
                 c.moveToNext();
-
             }
-
             c.close(); //On ferme le cursor
-
-
         }
         return desEtudiants.toArray(new String[desEtudiants.size()]); //On retourne une collection d'étudiants en format String
     }
@@ -329,9 +318,23 @@ public class bddDAO  {
         uneEntreprise.setNom(c.getString(NUM_COL_NOM_ENTREPRISE));
         uneEntreprise.setAdresse(c.getString(NUM_COL_ADRESSE_ENTREPRISE));
         uneEntreprise.setNumTel(c.getString(NUM_COL_NUMTEL_ENTREPRISE));
-
         c.close(); //On ferme le cursor
         return uneEntreprise; //On retourne l'entreprise
+    }
+
+    public static String[] cursorToEntreprise2(Cursor c){
+        ArrayList<String> desEntreprises = new ArrayList<String>();
+        if (c.getCount() != 0) {
+            c.moveToFirst(); //on se place sur le premier élément
+            while (!c.isAfterLast()) {
+                String uneEntreprise;
+                uneEntreprise = c.getString(NUM_COL_NOM_ENTREPRISE) + " " + c.getString(NUM_COL_ADRESSE_ENTREPRISE);
+                desEntreprises.add(uneEntreprise);
+                c.moveToNext();
+            }
+            c.close(); //On ferme le cursor
+        }
+        return desEntreprises.toArray(new String[desEntreprises.size()]); //On retourne une collection d'étudiants en format String
     }
 
 //--------------------------------------------------------------------------------------------------
@@ -347,9 +350,23 @@ public class bddDAO  {
         unProfesseur.setPrenom(c.getString(NUM_COL_PRENOM_PROFESSEUR));
         unProfesseur.setEmail(c.getString(NUM_COL_EMAIL_PROFESSEUR));
         unProfesseur.setNumTel(c.getString(NUM_COL_NUMTEL_PROFESSEUR));
-
         c.close(); //On ferme le cursor
         return unProfesseur; //On retourne le professeur
+    }
+
+    public static String[] cursorToProfesseur2(Cursor c){
+        ArrayList<String> desProfesseurs = new ArrayList<String>();
+        if (c.getCount() != 0) {
+            c.moveToFirst(); //on se place sur le premier élément
+            while (!c.isAfterLast()) {
+                String unProfesseur;
+                unProfesseur = c.getString(NUM_COL_NOM_PROFESSEUR) + " " + c.getString(NUM_COL_PRENOM_PROFESSEUR);
+                desProfesseurs.add(unProfesseur);
+                c.moveToNext();
+            }
+            c.close(); //On ferme le cursor
+        }
+        return desProfesseurs.toArray(new String[desProfesseurs.size()]); //On retourne une collection d'étudiants en format String
     }
 
 //--------------------------------------------------------------------------------------------------
@@ -372,7 +389,6 @@ public class bddDAO  {
         uneVisite.setParticipation(c.getInt(NUM_COL_PARTICIPATION_VISITE));
         uneVisite.setOpportunite(c.getInt(NUM_COL_OPPORTUNITE_VISITE));
         uneVisite.setSession(c.getString(NUM_COL_SESSION_VISITE));
-
         c.close(); //On ferme le cursor
         return uneVisite; //On retourne la visite
     }
@@ -391,9 +407,23 @@ public class bddDAO  {
         unTuteur.setPrenom(c.getString(NUM_COL_PRENOM_TUTEUR));
         unTuteur.setEmail(c.getString(NUM_COL_EMAIL_TUTEUR));
         unTuteur.setNumTel(c.getString(NUM_COL_NUMTEL_TUTEUR));
-
         c.close(); //On ferme le cursor
         return unTuteur; //On retourne le tuteur
+    }
+
+    public static String[] cursorToTuteur2(Cursor c){
+        ArrayList<String> desTuteurs = new ArrayList<String>();
+        if (c.getCount() != 0) {
+            c.moveToFirst(); //on se place sur le premier élément
+            while (!c.isAfterLast()) {
+                String unTuteur;
+                unTuteur = c.getString(NUM_COL_NOM_TUTEUR) + " " + c.getString(NUM_COL_PRENOM_TUTEUR);
+                desTuteurs.add(unTuteur);
+                c.moveToNext();
+            }
+            c.close(); //On ferme le cursor
+        }
+        return desTuteurs.toArray(new String[desTuteurs.size()]); //On retourne une collection d'étudiants en format String
     }
 
 }
