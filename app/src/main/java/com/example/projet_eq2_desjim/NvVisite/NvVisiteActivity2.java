@@ -1,4 +1,4 @@
-package com.example.projet_eq2_desjim;
+package com.example.projet_eq2_desjim.NvVisite;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NvVisiteActivity3 extends AppCompatActivity {
+import com.example.projet_eq2_desjim.R;
+
+public class NvVisiteActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_nvlvisite3);
+        setContentView(R.layout.layout_nvlvisite2);
 
         Button btnSuivant = (Button) findViewById(R.id.button4);
         Button btnPrecedent = (Button) findViewById(R.id.button5);
@@ -19,7 +21,7 @@ public class NvVisiteActivity3 extends AppCompatActivity {
             public void onClick(View v){
                 switch(v.getId()) {
                     case R.id.button4:
-                        startActivity(new Intent(NvVisiteActivity3.this, NvVisiteActivity4.class));
+                        startActivity(new Intent(NvVisiteActivity2.this, NvVisiteActivity3.class));
                         break;
                     case R.id.button5:
                         finish();
@@ -29,5 +31,9 @@ public class NvVisiteActivity3 extends AppCompatActivity {
 
         btnSuivant.setOnClickListener(ecouteur);
         btnPrecedent.setOnClickListener(ecouteur);
+
+
     }
+
+
 }

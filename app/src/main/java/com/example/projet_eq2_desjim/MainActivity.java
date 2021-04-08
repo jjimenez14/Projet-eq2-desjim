@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.example.projet_eq2_desjim.NvVisite.NvVisiteActivity;
+import com.example.projet_eq2_desjim.admin.AdminMenuActivity;
+
 import bdd.*;
 import Metier.*;
 
@@ -106,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, NvVisiteActivity.class));
                     break;
                     case R.id.buttonAdmin:
-                        startActivity(new Intent(MainActivity.this, AdminActivity.class));
+                        startActivity(new Intent(MainActivity.this, AdminMenuActivity.class));
                         break;
                     case R.id.buttonConsultVisite:
                         startActivity(new Intent(MainActivity.this, ListeVisitesActivity.class));
