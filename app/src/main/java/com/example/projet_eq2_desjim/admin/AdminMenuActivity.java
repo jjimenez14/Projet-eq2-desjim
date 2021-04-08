@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projet_eq2_desjim.MainActivity;
 import com.example.projet_eq2_desjim.R;
 import com.example.projet_eq2_desjim.admin.listes.ListeEntreprisesActivity;
 import com.example.projet_eq2_desjim.admin.listes.ListeEtudiantsActivity;
@@ -23,6 +24,7 @@ public class AdminMenuActivity extends AppCompatActivity {
         Button btnEntreprises = (Button) findViewById(R.id.buttonEntrpr);
         Button btnProfesseurs = (Button) findViewById(R.id.buttonProf);
         Button btnTuteurs = (Button) findViewById(R.id.buttonTuteur);
+        Button btnRetour = (Button) findViewById(R.id.button2);
 
 
         View.OnClickListener ecouteur = new View.OnClickListener(){
@@ -40,6 +42,9 @@ public class AdminMenuActivity extends AppCompatActivity {
                     case R.id.buttonTuteur:
                         startActivity(new Intent(AdminMenuActivity.this, ListeTuteursActivity.class));
                         break;
+                    case R.id.button2:
+                        startActivity(new Intent(AdminMenuActivity.this, MainActivity.class));
+                        break;
                 }
             }
         };
@@ -48,6 +53,7 @@ public class AdminMenuActivity extends AppCompatActivity {
         btnEntreprises.setOnClickListener(ecouteur);
         btnProfesseurs.setOnClickListener(ecouteur);
         btnTuteurs.setOnClickListener(ecouteur);
+        btnRetour.setOnClickListener(ecouteur);
 
     }
 

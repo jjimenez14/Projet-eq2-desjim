@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirTableEtudiant() {
         bddDAO etudiantBdd = new bddDAO(this);
-        Etudiant etudiant1 = new Etudiant(1,"Carlier","Jules","SEGPA", 2);
-        Etudiant etudiant2 = new Etudiant(2,"Desmonceaux","Baptiste","SEGPA", 2);
-        Etudiant etudiant3 = new Etudiant(3,"Jimenez","Julian","SEGPA", 2);
+        Etudiant etudiant1 = new Etudiant("Carlier","Jules","SEGPA", 2);
+        Etudiant etudiant2 = new Etudiant("Desmonceaux","Baptiste","SEGPA", 2);
+        Etudiant etudiant3 = new Etudiant("Jimenez","Julian","SEGPA", 2);
 
         //on ouvre la base de données
         etudiantBdd.open();

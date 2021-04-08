@@ -279,7 +279,7 @@ public class bddDAO  {
         if (c.getCount() == 0)
             return null;
         c.moveToFirst(); //on se place sur le premier élément
-        Etudiant unEtudiant = new Etudiant(0,null,null,null, 0); //On créé un étudiant
+        Etudiant unEtudiant = new Etudiant(null,null,null, 0); //On créé un étudiant
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
         unEtudiant.setNom(c.getString(NUM_COL_NOM_ETUDIANT));
         unEtudiant.setPrenom(c.getString(NUM_COL_PRENOM_ETUDIANT));

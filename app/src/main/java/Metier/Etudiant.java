@@ -8,7 +8,7 @@ public class Etudiant {
     String classe;
     int annee;
 
-    public Etudiant(int id, String nom, String prenom, String classe, int annee) {
+    public Etudiant(String nom, String prenom, String classe, int annee) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -54,5 +54,16 @@ public class Etudiant {
 
     public void setAnnee(int annee) {
         this.annee = annee;
+    }
+
+    @Override
+    public String toString() {
+        return "Etudiant{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", classe='" + classe + '\'' +
+                ", annee=" + annee +
+                '}';
     }
 }

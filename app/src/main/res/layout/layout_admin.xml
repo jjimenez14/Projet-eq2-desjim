@@ -33,36 +33,36 @@
             android:id="@+id/buttonElv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:text="Elèves" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="45dp" />
 
         <Button
             android:id="@+id/buttonEntrpr"
             android:layout_width="match_parent"
+            android:layout_marginBottom="30dp"
             android:layout_height="wrap_content"
             android:text="Entreprises" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="45dp" />
 
         <Button
             android:id="@+id/buttonProf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:text="Professeurs" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="45dp" />
 
         <Button
             android:id="@+id/buttonTuteur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tuteurs" />
+            android:text="Tuteurs"
+            android:layout_marginBottom="60dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="Retour" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
