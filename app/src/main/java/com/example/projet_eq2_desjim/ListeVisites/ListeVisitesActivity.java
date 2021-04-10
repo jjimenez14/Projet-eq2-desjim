@@ -1,13 +1,17 @@
-package com.example.projet_eq2_desjim;
+package com.example.projet_eq2_desjim.ListeVisites;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import bdd.*;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.projet_eq2_desjim.R;
 
 public class ListeVisitesActivity extends AppCompatActivity {
     @Override
@@ -39,9 +43,22 @@ public class ListeVisitesActivity extends AppCompatActivity {
             DaoVisite.close();
 
 
+        listViewVisite.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                listViewVisite.getItemAtPosition(position);
+
+                Intent intent = new Intent(ListeVisitesActivity.this,InfosVisiteActivity.class);
+                //based on item add info to intent
+                startActivity(intent);
+            }
+        });
+
+
+        }
+
 
 
 
     }
 
-}

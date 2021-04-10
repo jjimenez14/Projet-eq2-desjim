@@ -1,4 +1,4 @@
-package com.example.projet_eq2_desjim.admin;
+package com.example.projet_eq2_desjim.admin.menu;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import Metier.*;
 
 public class bddDAO  {
-    static final int VERSION_BDD =12;
+    static final int VERSION_BDD =14;
     private static final String NOM_BDD = "siobdd.db";
 
 //--------------------------------------------------------------------------------------------------

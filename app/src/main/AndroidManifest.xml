@@ -13,13 +13,18 @@
         <activity android:name=".NvVisite.NvVisiteActivity2"></activity>
         <activity android:name=".NvVisite.NvVisiteActivity3"></activity>
         <activity android:name=".NvVisite.NvVisiteActivity4"></activity>
-        <activity android:name=".admin.AdminMenuActivity"></activity>
+        <activity android:name=".admin.menu.AdminMenuActivity"></activity>
         <activity android:name=".admin.listes.ListeTuteursActivity"></activity>
         <activity android:name=".admin.listes.ListeProfesseursActivity"></activity>
         <activity android:name=".admin.listes.ListeEntreprisesActivity"></activity>
         <activity android:name=".admin.listes.ListeEtudiantsActivity"></activity>
         <activity android:name=".admin.ajouter.AjouterEtudiantActivity"></activity>
-        <activity android:name=".ListeVisitesActivity">
+        <activity android:name=".admin.ajouter.AjouterEntrepriseActivity"></activity>
+        <activity android:name=".admin.ajouter.AjouterProfActivity"></activity>
+        <activity android:name=".admin.ajouter.AjouterTuteurActivity"></activity>
+        <activity android:name=".ListeVisites.InfosVisiteActivity"></activity>
+
+        <activity android:name=".ListeVisites.ListeVisitesActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

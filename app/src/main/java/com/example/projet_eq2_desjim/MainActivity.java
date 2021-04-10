@@ -9,8 +9,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.example.projet_eq2_desjim.ListeVisites.ListeVisitesActivity;
 import com.example.projet_eq2_desjim.NvVisite.NvVisiteActivity;
-import com.example.projet_eq2_desjim.admin.AdminMenuActivity;
+import com.example.projet_eq2_desjim.admin.menu.AdminMenuActivity;
 
 import bdd.*;
 import Metier.*;
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_menu);
-       // remplirTableEtudiant();
+        //remplirTableEtudiant();
         //remplirTableEntreprise();
         //remplirTableProfesseur();
         //remplirTuteur();
