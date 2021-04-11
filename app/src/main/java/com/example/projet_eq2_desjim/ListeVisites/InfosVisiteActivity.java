@@ -56,15 +56,17 @@ public class InfosVisiteActivity extends AppCompatActivity {
         RadioButton radioButton4 = (RadioButton)  findViewById(R.id.radioButton4);
         RadioButton radioButton5 = (RadioButton)  findViewById(R.id.radioButton5);
         RadioButton radioButton6 = (RadioButton)  findViewById(R.id.radioButton6);
-        RadioButton radioButton7 = (RadioButton)  findViewById(R.id.radioButton7);
-        RadioButton radioButton8 = (RadioButton)  findViewById(R.id.radioButton8);
+        //EditText editTextSession = (EditText) findViewById(R.id.**);
+
 
         editTextDate.setText(visite.getDate());
         editTextConditions.setText(visite.getConditions());
         editTextBilan.setText(visite.getBilan());
         editTextResOutils.setText(visite.getResOutils());
         editTextCommentaires.setText(visite.getCommentaires());
+        //editTextSession.setText(visite.getSession());
 
+        
         if(visite.getParticipation() == 1) {
             radioButton3.setChecked(true);
         } else {
@@ -77,11 +79,9 @@ public class InfosVisiteActivity extends AppCompatActivity {
             radioButton6.setChecked(true);
         }
 
-        if(visite.getSession() == "Mai-Juin") {
-            radioButton7.setChecked(true);
-        } else {
-            radioButton8.setChecked(true);
-        }
+
+
+
 
         View.OnClickListener ecouteur = new View.OnClickListener() {
             public void onClick(View v) {
