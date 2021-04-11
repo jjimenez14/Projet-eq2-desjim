@@ -11,24 +11,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Liste des étudiants"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"/>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
@@ -69,32 +59,13 @@
 
             <ListView
                 android:id="@+id/listeleves"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="112dp" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="15dp"
-            android:text="Ajouter" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginBottom="30dp"
-            android:text="Retour" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

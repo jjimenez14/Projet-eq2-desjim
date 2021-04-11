@@ -1,4 +1,4 @@
-package com.example.projet_eq2_desjim.admin.menu;
+package com.example.projet_eq2_desjim.admin.menus;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,16 +31,16 @@ public class AdminMenuActivity extends AppCompatActivity {
             public void onClick(View v){
                 switch(v.getId()) {
                     case R.id.buttonElv:
-                        startActivity(new Intent(AdminMenuActivity.this, ListeEtudiantsActivity.class));
+                        startActivity(new Intent(AdminMenuActivity.this, EtudiantMenuActivity.class));
                         break;
                     case R.id.buttonEntrpr:
-                        startActivity(new Intent(AdminMenuActivity.this, ListeEntreprisesActivity.class));
+                        startActivity(new Intent(AdminMenuActivity.this, EntrepriseMenuActivity.class));
                         break;
                     case R.id.buttonProf:
-                        startActivity(new Intent(AdminMenuActivity.this, ListeProfesseursActivity.class));
+                        startActivity(new Intent(AdminMenuActivity.this, ProfMenuActivity.class));
                         break;
                     case R.id.buttonTuteur:
-                        startActivity(new Intent(AdminMenuActivity.this, ListeTuteursActivity.class));
+                        startActivity(new Intent(AdminMenuActivity.this, TuteurMenuActivity.class));
                         break;
                     case R.id.button2:
                         startActivity(new Intent(AdminMenuActivity.this, MainActivity.class));

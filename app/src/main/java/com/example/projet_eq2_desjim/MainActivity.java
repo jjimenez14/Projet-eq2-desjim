@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import com.example.projet_eq2_desjim.ListeVisites.ListeVisitesActivity;
 import com.example.projet_eq2_desjim.NvVisite.NvVisiteActivity;
-import com.example.projet_eq2_desjim.admin.menu.AdminMenuActivity;
+import com.example.projet_eq2_desjim.admin.menus.AdminMenuActivity;
 
 import bdd.*;
 import Metier.*;

@@ -12,41 +12,14 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ajouter une entreprise"
+            android:text="Entreprises"
             android:textSize="25sp"
             android:gravity="center"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"/>
-
-
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Nom de l'entreprise: " />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Adresse: " />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Numero de tél: " />
-
-
 
         <Button
             android:id="@+id/button4"
@@ -56,7 +29,7 @@
             android:layout_marginRight="45dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="15dp"
-            android:text="Valider" />
+            android:text="Listes entreprises" />
 
         <Button
             android:id="@+id/button5"
@@ -64,8 +37,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:layout_marginRight="45dp"
+            android:layout_marginBottom="300dp"
+            android:text="Ajouter une entreprise" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
             android:layout_marginBottom="30dp"
-            android:text="Annuler" />
+            android:text="Retour" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
