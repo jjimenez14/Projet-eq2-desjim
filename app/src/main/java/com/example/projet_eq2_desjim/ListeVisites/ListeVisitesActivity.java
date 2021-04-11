@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projet_eq2_desjim.R;
 
+import java.util.HashMap;
+
 public class ListeVisitesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +48,23 @@ public class ListeVisitesActivity extends AppCompatActivity {
         listViewVisite.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                listViewVisite.getItemAtPosition(position);
+               listViewVisite.getItemAtPosition(position);
+
+
+
+
+
+
+
+
+
+
+
+
 
                 Intent intent = new Intent(ListeVisitesActivity.this,InfosVisiteActivity.class);
-                //based on item add info to intent
-                startActivity(intent);
+                intent.putExtra("IdVisite", position);
+                startActivityForResult(intent, 0);
             }
         });
 

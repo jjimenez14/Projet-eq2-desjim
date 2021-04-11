@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirVisite() {
         bddDAO visiteBdd = new bddDAO(this);
-        Visite visite1 = new Visite(1,1,1,1,"12/01/2001","Zomega","bien","symfony", "très bon stage", 1, 1, "2021");
+        Visite visite1 = new Visite(1,1,1,1,"12/01/2001","avoir une voiture","bien","symfony", "très bon stage", 1, 1, "Mai-Juin");
 
         //on ouvre la base de données
         visiteBdd.open();

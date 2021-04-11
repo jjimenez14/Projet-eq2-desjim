@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import Metier.*;
 
 public class bddDAO  {
-    static final int VERSION_BDD =14;
+    static final int VERSION_BDD =15;
     private static final String NOM_BDD = "siobdd.db";
 
 //--------------------------------------------------------------------------------------------------
@@ -371,7 +371,7 @@ public class bddDAO  {
 
 //--------------------------------------------------------------------------------------------------
 
-    private Visite cursorToVisite(Cursor c){
+    public Visite cursorToVisite(Cursor c){
 
         if (c.getCount() == 0)
             return null;
