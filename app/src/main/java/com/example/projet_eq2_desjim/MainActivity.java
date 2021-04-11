@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirTuteur() {
         bddDAO tuteurBdd = new bddDAO(this);
-        Tuteur tuteur1 = new Tuteur(1,1,"Fonteneau","Mattthieu","0645857695", "fonteneau.mattt@gmail.com");
+        Tuteur tuteur1 = new Tuteur(1,1,"Dupont","Matthieu","fonteneau.mattt@gmail.com", "0645857695");
 
         //on ouvre la base de données
         tuteurBdd.open();
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirVisite() {
         bddDAO visiteBdd = new bddDAO(this);
-        Visite visite1 = new Visite(1,1,1,1,"12/01/2001","Zomega","raksé","caillou", "raksé", 1, 1, "2001");
+        Visite visite1 = new Visite(1,1,1,1,"12/01/2001","Zomega","bien","symfony", "très bon stage", 1, 1, "2021");
 
         //on ouvre la base de données
         visiteBdd.open();
