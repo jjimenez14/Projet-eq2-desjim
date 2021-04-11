@@ -82,7 +82,7 @@ public class NvVisiteActivity extends AppCompatActivity {
     String[] lesProfesseurs = bddDAO.cursorToProfesseur2(c2);
 
     ArrayAdapter<String> dataAdapterR2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lesProfesseurs);
-        dataAdapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataAdapterR2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerProfesseur.setAdapter(dataAdapterR2);
         spinnerProfesseur.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
 
@@ -107,7 +107,7 @@ public class NvVisiteActivity extends AppCompatActivity {
     String[] lesTuteurs = bddDAO.cursorToTuteur2(c3);
 
     ArrayAdapter<String> dataAdapterR3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lesTuteurs);
-    dataAdapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    dataAdapterR3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinnerTuteur.setAdapter(dataAdapterR3);
     spinnerTuteur.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
 
@@ -131,7 +131,7 @@ public class NvVisiteActivity extends AppCompatActivity {
     String[] lesEntreprises = bddDAO.cursorToEntreprise2(c4);
 
     ArrayAdapter<String> dataAdapterR4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lesEntreprises);
-        dataAdapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataAdapterR4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEntreprise.setAdapter(dataAdapterR4);
         spinnerEntreprise.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
 

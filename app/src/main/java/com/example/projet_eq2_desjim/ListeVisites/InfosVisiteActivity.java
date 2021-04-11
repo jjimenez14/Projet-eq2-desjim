@@ -66,7 +66,7 @@ public class InfosVisiteActivity extends AppCompatActivity {
         editTextCommentaires.setText(visite.getCommentaires());
         //editTextSession.setText(visite.getSession());
 
-        
+
         if(visite.getParticipation() == 1) {
             radioButton3.setChecked(true);
         } else {
