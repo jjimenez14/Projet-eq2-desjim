@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirTableEntreprise() {
         bddDAO entrepriseBdd = new bddDAO(this);
-        Entreprise entreprise1 = new Entreprise(1,"Chlorophylle","5 boulevard du zinzolin","0645857478");
+        Entreprise entreprise1 = new Entreprise("Chlorophylle","5 boulevard du zinzolin","0645857478");
 
         //on ouvre la base de données
         entrepriseBdd.open();
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirTableProfesseur() {
         bddDAO professeurBdd = new bddDAO(this);
-        Professeur professeur1 = new Professeur(1,"Bourgeois","Nicolas","nbourgeois@gmail.com","0645857695");
+        Professeur professeur1 = new Professeur("Bourgeois","Nicolas","nbourgeois@gmail.com","0645857695");
 
         //on ouvre la base de données
         professeurBdd.open();
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void remplirTuteur() {
         bddDAO tuteurBdd = new bddDAO(this);
-        Tuteur tuteur1 = new Tuteur(1,1,"Dupont","Matthieu","fonteneau.mattt@gmail.com", "0645857695");
+        Tuteur tuteur1 = new Tuteur(1,"Dupont","Matthieu","fonteneau.mattt@gmail.com", "0645857695");
 
         //on ouvre la base de données
         tuteurBdd.open();

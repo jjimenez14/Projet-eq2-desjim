@@ -36,7 +36,7 @@ public class NvVisiteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.button4:
-                        startActivity(new Intent(NvVisiteActivity.this, NvVisiteActivity2.class));
+                        startActivity(new Intent(NvVisiteActivity.this, NvVisiteActivity3.class));
                         break;
                     case R.id.button5:
                         finish();

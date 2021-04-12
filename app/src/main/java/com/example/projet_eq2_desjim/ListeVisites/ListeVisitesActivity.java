@@ -52,16 +52,6 @@ public class ListeVisitesActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
                 Intent intent = new Intent(ListeVisitesActivity.this,InfosVisiteActivity.class);
                 intent.putExtra("IdVisite", position);
                 startActivityForResult(intent, 0);

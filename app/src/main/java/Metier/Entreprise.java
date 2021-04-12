@@ -7,7 +7,7 @@ public class Entreprise {
     String adresse;
     String numTel;
 
-    public Entreprise(int id, String nom, String adresse, String numTel) {
+    public Entreprise(String nom, String adresse, String numTel) {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;
