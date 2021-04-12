@@ -42,6 +42,12 @@
                     android:hint="Date de la visite"
                     android:inputType="date" />
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Conditions du stage" />
+
                 <EditText
                     android:id="@+id/editTextTextMultiLine"
                     android:layout_width="match_parent"
@@ -52,8 +58,14 @@
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/custom_input"
                     android:ems="10"
-                    android:hint="   Conditions du stage"
+                    android:hint=""
                     android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Bilan des travaux réalisés" />
 
                 <EditText
                     android:id="@+id/editTextTextMultiLine2"
@@ -65,8 +77,14 @@
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/custom_input"
                     android:ems="10"
-                    android:hint="   Bilan des travaux réalisés"
+                    android:hint=""
                     android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Ressources et outils utilisés" />
 
                 <EditText
                     android:id="@+id/editTextTextMultiLine3"
@@ -78,8 +96,14 @@
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/custom_input"
                     android:ems="10"
-                    android:hint="   Ressources et outils utilisés"
+                    android:hint=""
                     android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Commentaires et appréciation générale" />
 
                 <EditText
                     android:id="@+id/editTextTextMultiLine4"
@@ -91,7 +115,7 @@
                     android:layout_marginBottom="45dp"
                     android:background="@drawable/custom_input"
                     android:ems="10"
-                    android:hint="   Commentaires et appréciation générale"
+                    android:hint=""
                     android:inputType="textMultiLine" />
 
                 <TextView
