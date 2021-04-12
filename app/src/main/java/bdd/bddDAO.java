@@ -258,13 +258,19 @@ public class bddDAO  {
 
     public Cursor getDataEtudiantById(int idetudiant){ return db.rawQuery("SELECT * FROM table_etudiant WHERE _id = " + "\"" + idetudiant + "\"",null);}
 
+    public Cursor getDataEtudiantByNom(String nomEtudiant){ return db.rawQuery("SELECT * FROM table_etudiant WHERE NomEtudiant = " + "\"" + nomEtudiant + "\"",null);}
+
     public Cursor getDataEntrepriseById(int identreprise){ return db.rawQuery("SELECT * FROM table_entreprise WHERE _id = " + "\"" + identreprise + "\"",null);}
 
     public Cursor getDataEntrepriseByNom(String nomEntreprise){ return db.rawQuery("SELECT * FROM table_entreprise WHERE NomEntreprise = " + "\"" + nomEntreprise + "\"",null);}
 
     public Cursor getDataProfesseurById(int idprofesseur){ return db.rawQuery("SELECT * FROM table_professeur WHERE _id = " + "\"" + idprofesseur + "\"",null);}
 
+    public Cursor getDataProfesseurByNom(String nomProfesseur){ return db.rawQuery("SELECT * FROM table_professeur WHERE NomProfesseur = " + "\"" + nomProfesseur + "\"",null);}
+
     public Cursor getDataTuteurById(int idtuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE _id = " + "\"" + idtuteur + "\"",null);}
+
+    public Cursor getDataTuteurByNom(String nomTuteur){ return db.rawQuery("SELECT * FROM table_tuteur WHERE NomTuteur = " + "\"" + nomTuteur + "\"",null);}
 
     public Cursor getDataVisiteById(int idvisite){ return db.rawQuery("SELECT * FROM table_visite WHERE _id = " + "\"" + idvisite + "\"",null);}
 
@@ -276,13 +282,14 @@ public class bddDAO  {
 
 //--------------------------------------------------------------------------------------------------
 
-    private Etudiant cursorToEtudiant(Cursor c){
+    public Etudiant cursorToEtudiant(Cursor c){
 
         if (c.getCount() == 0)
             return null;
         c.moveToFirst(); //on se place sur le premier élément
         Etudiant unEtudiant = new Etudiant(null,null,null, 0); //On créé un étudiant
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unEtudiant.setId(c.getInt(NUM_COL_ID_ETUDIANT));
         unEtudiant.setNom(c.getString(NUM_COL_NOM_ETUDIANT));
         unEtudiant.setPrenom(c.getString(NUM_COL_PRENOM_ETUDIANT));
         unEtudiant.setClasse(c.getString(NUM_COL_CLASSE_ETUDIANT));
@@ -299,7 +306,7 @@ public class bddDAO  {
             c.moveToFirst(); //on se place sur le premier élément
             while (!c.isAfterLast()) {
                 String unEtudiant;
-                unEtudiant = c.getString(NUM_COL_NOM_ETUDIANT) + " " + c.getString(NUM_COL_PRENOM_ETUDIANT) + " " + c.getString(NUM_COL_CLASSE_ETUDIANT);
+                unEtudiant = c.getString(NUM_COL_PRENOM_ETUDIANT) + " " + c.getString(NUM_COL_NOM_ETUDIANT);
                 desEtudiants.add(unEtudiant);
                 c.moveToNext();
             }
@@ -342,13 +349,14 @@ public class bddDAO  {
 
 //--------------------------------------------------------------------------------------------------
 
-    private Professeur cursorToProfesseur(Cursor c){
+    public Professeur cursorToProfesseur(Cursor c){
 
         if (c.getCount() == 0)
             return null;
         c.moveToFirst(); //on se place sur le premier élément
         Professeur unProfesseur = new Professeur(null,null,null, null); //On créé un étudiant
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unProfesseur.setId(c.getInt(NUM_COL_ID_PROFESSEUR));
         unProfesseur.setNom(c.getString(NUM_COL_NOM_PROFESSEUR));
         unProfesseur.setPrenom(c.getString(NUM_COL_PRENOM_PROFESSEUR));
         unProfesseur.setEmail(c.getString(NUM_COL_EMAIL_PROFESSEUR));
@@ -363,7 +371,7 @@ public class bddDAO  {
             c.moveToFirst(); //on se place sur le premier élément
             while (!c.isAfterLast()) {
                 String unProfesseur;
-                unProfesseur = c.getString(NUM_COL_NOM_PROFESSEUR) + " " + c.getString(NUM_COL_PRENOM_PROFESSEUR);
+                unProfesseur = c.getString(NUM_COL_PRENOM_PROFESSEUR) + " " + c.getString(NUM_COL_NOM_PROFESSEUR);
                 desProfesseurs.add(unProfesseur);
                 c.moveToNext();
             }
@@ -379,7 +387,7 @@ public class bddDAO  {
         if (c.getCount() == 0)
             return null;
         c.moveToFirst(); //on se place sur le premier élément
-        Visite uneVisite = new Visite(0,0,0,0, null, null, null, null, null , 0, 0, null); //On créé un étudiant
+        Visite uneVisite = new Visite(0,0,0, null, null, null, null, null , 0, 0, null); //On créé un étudiant
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
         uneVisite.setIdEtudiant(c.getInt(NUM_COL_ID_ETUDIANT_VISITE));
         uneVisite.setIdTuteur(c.getInt(NUM_COL_ID_TUTEUR_VISITE));
@@ -405,6 +413,7 @@ public class bddDAO  {
         c.moveToFirst(); //on se place sur le premier élément
         Tuteur unTuteur = new Tuteur(0,null,null, null, null); //On créé un étudiant
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+        unTuteur.setId(c.getInt(NUM_COL_ID_TUTEUR));
         unTuteur.setIdEntrepriset(c.getInt(NUM_COL_ID_ENTREPRISE_TUTEUR));
         unTuteur.setNom(c.getString(NUM_COL_NOM_TUTEUR));
         unTuteur.setPrenom(c.getString(NUM_COL_PRENOM_TUTEUR));
@@ -420,7 +429,7 @@ public class bddDAO  {
             c.moveToFirst(); //on se place sur le premier élément
             while (!c.isAfterLast()) {
                 String unTuteur;
-                unTuteur = c.getString(NUM_COL_NOM_TUTEUR) + " " + c.getString(NUM_COL_PRENOM_TUTEUR);
+                unTuteur = c.getString(NUM_COL_PRENOM_TUTEUR) + " " + c.getString(NUM_COL_NOM_TUTEUR);
                 desTuteurs.add(unTuteur);
                 c.moveToNext();
             }

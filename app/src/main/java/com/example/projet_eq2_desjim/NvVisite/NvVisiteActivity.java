@@ -32,20 +32,8 @@ public class NvVisiteActivity extends AppCompatActivity {
 
         Button btnSuivant = (Button) findViewById(R.id.button4);
         Button btnPrecedent = (Button) findViewById(R.id.button5);
-        View.OnClickListener ecouteur = new View.OnClickListener() {
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.button4:
-                        startActivity(new Intent(NvVisiteActivity.this, NvVisiteActivity3.class));
-                        break;
-                    case R.id.button5:
-                        finish();
-                }
-            }
-        };
 
-        btnSuivant.setOnClickListener(ecouteur);
-        btnPrecedent.setOnClickListener(ecouteur);
+
         bddDAO NvBdd = new bddDAO(this);
         NvBdd.open();
 //--------------------------------------------------------------------------------------------------
@@ -150,7 +138,28 @@ public class NvVisiteActivity extends AppCompatActivity {
 
 //--------------------------------------------------------------------------------------------------
 
-    NvBdd.close();
+        View.OnClickListener ecouteur = new View.OnClickListener() {
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.button4:
+
+                        Intent intent = new Intent(NvVisiteActivity.this, NvVisiteActivity3.class);
+                        intent.putExtra("etudiant", String.valueOf(spinnerEtudiant.getSelectedItem()));
+                        intent.putExtra("entreprise", String.valueOf(spinnerEntreprise.getSelectedItem()));
+                        intent.putExtra("prof", String.valueOf(spinnerProfesseur.getSelectedItem()));
+                        intent.putExtra("tuteur", String.valueOf(spinnerTuteur.getSelectedItem()));
+
+                        startActivityForResult(intent, 0);
+
+                        break;
+                    case R.id.button5:
+                        finish();
+                }
+            }
+        };
+
+        btnSuivant.setOnClickListener(ecouteur);
+        btnPrecedent.setOnClickListener(ecouteur);
 
     }
 

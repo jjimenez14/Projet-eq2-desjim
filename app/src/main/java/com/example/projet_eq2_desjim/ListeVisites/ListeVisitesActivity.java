@@ -50,8 +50,6 @@ public class ListeVisitesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                listViewVisite.getItemAtPosition(position);
 
-
-
                 Intent intent = new Intent(ListeVisitesActivity.this,InfosVisiteActivity.class);
                 intent.putExtra("IdVisite", position);
                 startActivityForResult(intent, 0);

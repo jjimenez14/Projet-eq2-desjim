@@ -15,7 +15,7 @@ public class Visite {
     int opportunite;
     String session;
 
-    public Visite(int id, int idEtudiant, int idTuteur, int idProfesseur, String date, String conditions, String bilan, String resOutils, String commentaires, int participation, int opportunite, String session) {
+    public Visite(int idEtudiant, int idTuteur, int idProfesseur, String date, String conditions, String bilan, String resOutils, String commentaires, int participation, int opportunite, String session) {
         this.id = id;
         this.idEtudiant = idEtudiant;
         this.idTuteur = idTuteur;
@@ -124,5 +124,23 @@ public class Visite {
 
     public void setSession(String session) {
         this.session = session;
+    }
+
+    @Override
+    public String toString() {
+        return "Visite{" +
+                "id=" + id +
+                ", idEtudiant=" + idEtudiant +
+                ", idTuteur=" + idTuteur +
+                ", idProfesseur=" + idProfesseur +
+                ", date='" + date + '\'' +
+                ", conditions='" + conditions + '\'' +
+                ", bilan='" + bilan + '\'' +
+                ", resOutils='" + resOutils + '\'' +
+                ", commentaires='" + commentaires + '\'' +
+                ", participation=" + participation +
+                ", opportunite=" + opportunite +
+                ", session='" + session + '\'' +
+                '}';
     }
 }
